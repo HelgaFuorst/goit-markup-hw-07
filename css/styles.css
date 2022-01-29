@@ -216,7 +216,7 @@ button {
 /*Студия*/
 /*Баннер*/
 
-.banner-section {
+.banner {
   height: 600px;
   max-width: 1600px;
   margin-left: auto;
@@ -235,7 +235,7 @@ button {
   background-size: cover;
 }
 /* Основной заголовок */
-.main-studio-header {
+.banner__header {
   margin-top: 0;
   font-weight: 900;
   font-size: 44px;
@@ -245,39 +245,39 @@ button {
   color: var(--white-color);
 }
 /* Кнопка баннера */
-.banner-button {
+.banner__button {
   margin-top: 29px;
   padding: 10px 32px;
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
+  color: var(--white-color);
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   align-items: center;
   background: var(--brand-color);
-}
-/* Актив кнопки */
-.text-shadow {
-  color: var(--white-color);
+
   text-shadow: none;
 
-  transition: text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: text-shadow var(--time) var(--cubic);
 }
-.text-shadow:hover,
-.text-shadow:focus {
+/* Актив кнопки */
+
+.banner__button:hover,
+.banner__button:focus {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*Основные принципы*/
-.main-pr-list {
+.principles {
   display: flex;
   justify-content: center;
 }
-.main-pr-list .item:not(:last-child) {
+.principles__item:not(:last-child) {
   margin-right: 30px;
 }
-.princ-icon {
+.principles__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,14 +289,14 @@ button {
 }
 
 /* Второй заголовок */
-.second-header {
+.principles__name {
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
 }
 /* Описание принципов */
-.principles-description {
+.principles__description {
   width: 270px;
   font-size: 14px;
   line-height: 1.71;
@@ -304,19 +304,19 @@ button {
   color: var(--second-text-color);
 }
 /*Чем мы занимаемся*/
-.img-row {
+.activity {
   display: flex;
   margin-top: 50px;
   justify-content: center;
 }
-.img-row .item:not(:last-child) {
+.activity__item:not(:last-child) {
   margin-right: 30px;
 }
-.what-position {
+.activity__box {
   position: relative;
   z-index: 1;
 }
-.what-description {
+.activity__description {
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -336,7 +336,7 @@ button {
   background-color: #f5f4fa;
 }
 
-.section-header-text {
+.section-header {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
