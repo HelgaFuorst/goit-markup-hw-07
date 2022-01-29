@@ -411,16 +411,18 @@ button {
 }
 
 /* Клиенты */
-.clients-row {
+.clients {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  margin-left: -30px;
 }
-.logo-row {
+.clients__item {
   display: flex;
   margin-left: 30px;
 }
-.logo-item {
+
+.clients__link {
   display: flex;
   width: 170px;
   height: 92px;
@@ -434,8 +436,8 @@ button {
   transition: border-color var(--time) var(--cubic),
     fill var(--time) var(--cubic);
 }
-.logo-item:hover,
-.logo-item:focus {
+.clients__link:hover,
+.clients__link:focus {
   fill: var(--brand-color);
   border-color: var(--brand-color);
 }
@@ -457,7 +459,7 @@ button {
   visibility: hidden;
   pointer-events: none;
 }
-
+/* Манипуляции Модалки */
 .modal {
   position: absolute;
   top: 50%;
@@ -476,7 +478,7 @@ button {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.5);
 }
-
+/* Кнопка Х */
 .close-button {
   position: absolute;
   top: 8px;
@@ -496,7 +498,8 @@ button {
   transform: scale(1.25);
   fill: var(--brand-color);
 }
-.modal-header {
+/* Заголовок Модалки */
+.modal__header {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -504,14 +507,15 @@ button {
   text-align: center;
   margin-bottom: 12px;
 }
-.modal-form {
+/* Регистрация */
+.registration {
   display: flex;
   flex-direction: column;
 }
-.modal-form-style {
+.modal__box {
   margin-bottom: 10px;
 }
-.form-name-direction {
+.registration__label {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -522,10 +526,10 @@ button {
   color: var(--second-text-color);
   margin-bottom: 3px;
 }
-.icon-main {
+.registration__box {
   position: relative;
 }
-.modal-input-main {
+.registration__input {
   width: 100%;
   height: 40px;
   padding-left: 40px;
@@ -535,10 +539,10 @@ button {
 
   transition: border var(--time) var(--cubic);
 }
-.modal-input-main:focus {
+.registration__input:focus {
   border: 1px solid var(--brand-color);
 }
-.form-icon {
+.registration__icon {
   position: absolute;
   top: 0;
   left: 12px;
@@ -547,11 +551,12 @@ button {
   transition: fill var(--time) var(--cubic);
 }
 
-.icon-main:focus-within > .form-icon {
+.registration__box:focus-within > .registration__icon {
   fill: var(--brand-color);
 }
 
-.comment {
+/* Комментарии */
+.commentaries__text {
   resize: none;
 
   padding-left: 15px;
@@ -565,17 +570,14 @@ button {
 
   transition: border var(--time) var(--cubic);
 }
-.comment:focus {
+.commentaries__text:focus {
   border: 1px solid var(--brand-color);
 }
-.comment::placeholder {
+.commentaries__text::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
-/* .check-box-policy {
-  display: flex;
-  align-items: center;
-} */
-.check-box-text {
+/* Политика */
+.policy__label {
   display: flex;
   align-items: center;
   margin-left: 7px;
@@ -585,7 +587,7 @@ button {
   line-height: 1.71;
   color: var(--second-text-color);
 }
-.check-border {
+.policy__border {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -599,31 +601,31 @@ button {
   transition: background-color var(--time) var(--cubic),
     border var(--time) var(--cubic);
 }
-.check-icon {
+.policy__icon {
   fill: transparent;
   transition: fill var(--time) var(--cubic);
 }
-.check-box {
+.policy__input {
   position: absolute;
   appearance: none;
 }
-.check-box:checked:not(.check-border) {
+.policy__input:checked:not(.policy__border) {
   background-color: var(--white-color);
 }
 
-.check-box:checked + .check-border > .check-icon {
+.policy__input:checked + .policy__border > .policy__icon {
   fill: var(--white-color);
 }
-.check-box:checked + .check-border {
+.policy__input:checked + .policy__border {
   background-color: var(--brand-color);
   border: transparent;
 }
 
-.policy {
+.policy__link {
   color: var(--brand-color);
   margin-left: 4px;
 }
-.modal-form-button {
+.registration__button {
   width: 200px;
   height: 50px;
 
@@ -645,8 +647,8 @@ button {
 
   transition: background-color var(--time) var(--cubic);
 }
-.modal-form-button:hover,
-.modal-form-button:focus {
+.registration__button:hover,
+.registration__button:focus {
   background-color: #188ce8;
 }
 /*Подвал*/
