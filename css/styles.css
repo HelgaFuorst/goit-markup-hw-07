@@ -344,26 +344,26 @@ button {
   letter-spacing: 0.03em;
 }
 /* Манипуляции с командой */
-.our-team {
+.workers {
   display: flex;
   margin-top: 50px;
   justify-content: center;
 }
-.our-team .item:not(:last-child) {
+.workers__item:not(:last-child) {
   margin-right: 30px;
 }
-.our-team .item {
+.workers__item {
   padding-bottom: 30px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.worker-img {
+.workers__img {
   margin-bottom: 30px;
 }
 /* Имена и позиции */
-.worker-name {
+.workers__name {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -371,7 +371,7 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.position {
+.workers__position {
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.18;
@@ -389,7 +389,7 @@ button {
   padding-left: 32px;
   margin-right: -10px;
 }
-.social-link {
+.social-media__link {
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -403,8 +403,8 @@ button {
   transition: background-color var(--time) var(--cubic),
     fill var(--time) var(--cubic);
 }
-.social-link:hover,
-.social-link:focus {
+.social-media__link:hover,
+.social-media__link:focus {
   fill: var(--white-color);
   background-color: var(--brand-color);
   animation: scalx 1000ms infinite alternate ease-in 500ms;
