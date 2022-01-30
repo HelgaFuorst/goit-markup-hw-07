@@ -1,7 +1,7 @@
 /* Палитра */
 /* Цвет основного текста #212121*/
 /* Вторичный цвет текста #757575*/
-/* Троичный цвет текста rgba(255, 255, 255, 0.6); */
+/* Троичный цвет текста $trans-gray; */
 /* Цвет действия #2196F3*/
 /* Белый цвет текста #FFFFFF*/
 /* Основной фон #ffffff*/
@@ -19,167 +19,6 @@
     transform: scale(1);
   }
 }
-/* Цветовые переменные */
-:root {
-  --main-text-color: #212121;
-  --brand-color: #2196f3;
-  --second-text-color: #757575;
-  --white-color: #ffffff;
-  --black-color: #000000;
-  --icon-color: #afb1b8;
-
-  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
-  --time: 250ms;
-}
-/* Общие характеристики по тегам */
-
-/* Контейнеры-секции */
-.container {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.additional-sec {
-  padding-bottom: 94px;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
-
-/*Шапка*/
-.head {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ececec;
-}
-.head__row {
-  display: flex;
-  align-items: center;
-}
-/*Navigation*/
-.navigation {
-  display: flex;
-  align-items: center;
-}
-/*Logotyp*/
-.logo {
-  text-decoration: none;
-  font-family: Raleway;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.2;
-}
-.logo__text--color-main {
-  color: var(--brand-color);
-}
-.logo__text--color-black {
-  color: var(--black-color);
-}
-/* Навигация */
-.site-nav {
-  display: flex;
-  margin-left: 93px;
-}
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
-}
-.site-nav__item {
-  position: relative;
-}
-
-.site-nav__text {
-  color: var(--main-text-color);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.site-nav__text::after {
-  position: absolute;
-  display: flex;
-  content: "";
-  width: 100%;
-  height: 4px;
-  background-color: none;
-  border-radius: 2px;
-  bottom: -30px;
-  left: 0;
-
-  transition: background-color var(--time) var(--cubic);
-}
-.site-nav__text:hover::after {
-  background-color: var(--brand-color);
-}
-.site-nav__text {
-  color: var(--main-text-color);
-  transition: color var(--time) var(--cubic);
-}
-.site-nav__text:hover,
-.site-nav__text:focus {
-  color: var(--brand-color);
-}
-
-.site-nav__text--active {
-  color: var(--brand-color);
-}
-.site-nav__text--active::after {
-  position: absolute;
-  display: flex;
-  content: "";
-  width: 100%;
-  height: 4px;
-  background-color: var(--brand-color);
-  border-radius: 2px;
-  bottom: -30px;
-  left: 0;
-}
-/* Контакты Шапки */
-.site-contacts {
-  display: flex;
-  margin-left: auto;
-}
-.site-contacts__item:not(:last-child) {
-  margin-right: 50px;
-}
-.site-contacts__item {
-  fill: var(--second-text-color);
-}
-.site-contacts__link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: var(--second-text-color);
-
-  transition: color var(--time) var(--cubic), fill var(--time) var(--cubic);
-}
-.site-contacts__icon {
-  margin-right: 10px;
-}
-.site-contacts__link:hover,
-.site-contacts__link:focus {
-  color: var(--brand-color);
-  fill: var(--brand-color);
-}
-/*Студия*/
-/*Баннер*/
 
 .banner {
   height: 600px;
@@ -207,7 +46,7 @@
   line-height: 1.36;
   text-align: center;
   text-transform: uppercase;
-  color: var(--white-color);
+  color: $white-color;
 }
 /* Кнопка баннера */
 .banner__button {
@@ -216,16 +55,16 @@
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--white-color);
+  color: $white-color;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
   align-items: center;
-  background: var(--brand-color);
+  background: $brand-color;
 
   text-shadow: none;
 
-  transition: text-shadow var(--time) var(--cubic);
+  transition: text-shadow $main-time $cubic;
 }
 /* Актив кнопки */
 
@@ -266,7 +105,7 @@
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: var(--second-text-color);
+  color: $second-text-color;
 }
 /*Чем мы занимаемся*/
 .activity {
@@ -292,7 +131,7 @@
   line-height: 16px;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--white-color);
+  color: $white-color;
   background: rgba(47, 48, 58, 0.8);
 }
 
@@ -319,7 +158,7 @@
 }
 .workers__item {
   padding-bottom: 30px;
-  background-color: var(--white-color);
+  background-color: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -342,7 +181,7 @@
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--second-text-color);
+  color: $second-text-color;
 }
 /* Социальные-сети */
 .social-media {
@@ -365,13 +204,12 @@
   height: 44px;
   fill: var(--icon-color);
 
-  transition: background-color var(--time) var(--cubic),
-    fill var(--time) var(--cubic);
+  transition: background-color $main-time $cubic, fill $main-time $cubic;
 }
 .social-media__link:hover,
 .social-media__link:focus {
-  fill: var(--white-color);
-  background-color: var(--brand-color);
+  fill: $white-color;
+  background-color: $brand-color;
   animation: scalx 1000ms infinite alternate ease-in 500ms;
 }
 
@@ -398,13 +236,12 @@
   border-radius: 4px;
   fill: var(--icon-color);
 
-  transition: border-color var(--time) var(--cubic),
-    fill var(--time) var(--cubic);
+  transition: border-color $main-time $cubic, fill $main-time $cubic;
 }
 .clients__link:hover,
 .clients__link:focus {
-  fill: var(--brand-color);
-  border-color: var(--brand-color);
+  fill: $brand-color;
+  border-color: $brand-color;
 }
 /* Модальное окно №1 */
 .backdrop {
@@ -416,8 +253,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity var(--time) var(--cubic),
-    visibility var(--time) var(--cubic);
+  transition: opacity $main-time $cubic, visibility $main-time $cubic;
 }
 .is-hidden {
   opacity: 0;
@@ -434,7 +270,7 @@
   min-width: 528px;
   min-height: 521px;
   transition: transform 1000ms var(--cubic);
-  background-color: var(--white-color);
+  background-color: $white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -451,17 +287,17 @@
 
   border: none;
   border-radius: 50%;
-  background-color: var(--white-color);
+  background-color: $white-color;
 
   fill: #000000;
 
   transform: scale(1);
-  transition: transform var(--time) var(--cubic), fill var(--time) var(--cubic);
+  transition: transform $main-time $cubic, fill $main-time $cubic;
 }
 
 .close-button:hover {
   transform: scale(1.25);
-  fill: var(--brand-color);
+  fill: $brand-color;
 }
 /* Заголовок Модалки */
 .modal__header {
@@ -488,7 +324,7 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 1.16;
-  color: var(--second-text-color);
+  color: $second-text-color;
   margin-bottom: 3px;
 }
 .registration__box {
@@ -502,22 +338,22 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  transition: border var(--time) var(--cubic);
+  transition: border $main-time $cubic;
 }
 .registration__input:focus {
-  border: 1px solid var(--brand-color);
+  border: 1px solid $brand-color;
 }
 .registration__icon {
   position: absolute;
   top: 0;
   left: 12px;
-  fill: var(--main-text-color);
+  fill: $main-text-color;
   transform: translateY(50%);
-  transition: fill var(--time) var(--cubic);
+  transition: fill $main-time $cubic;
 }
 
 .registration__box:focus-within > .registration__icon {
-  fill: var(--brand-color);
+  fill: $brand-color;
 }
 
 /* Комментарии */
@@ -533,10 +369,10 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  transition: border var(--time) var(--cubic);
+  transition: border $main-time $cubic;
 }
 .commentaries__text:focus {
-  border: 1px solid var(--brand-color);
+  border: 1px solid $brand-color;
 }
 .commentaries__text::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -550,7 +386,7 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
-  color: var(--second-text-color);
+  color: $second-text-color;
 }
 .policy__border {
   display: flex;
@@ -560,34 +396,33 @@
   height: 15px;
 
   margin-right: 9px;
-  border: 2px solid var(--main-text-color);
+  border: 2px solid $main-text-color;
   border-radius: 2px;
 
-  transition: background-color var(--time) var(--cubic),
-    border var(--time) var(--cubic);
+  transition: background-color $main-time $cubic, border $main-time $cubic;
 }
 .policy__icon {
   fill: transparent;
-  transition: fill var(--time) var(--cubic);
+  transition: fill $main-time $cubic;
 }
 .policy__input {
   position: absolute;
   appearance: none;
 }
 .policy__input:checked:not(.policy__border) {
-  background-color: var(--white-color);
+  background-color: $white-color;
 }
 
 .policy__input:checked + .policy__border > .policy__icon {
-  fill: var(--white-color);
+  fill: $white-color;
 }
 .policy__input:checked + .policy__border {
-  background-color: var(--brand-color);
+  background-color: $brand-color;
   border: transparent;
 }
 
 .policy__link {
-  color: var(--brand-color);
+  color: $brand-color;
   margin-left: 4px;
 }
 .registration__button {
@@ -600,8 +435,8 @@
   padding: 12px 32px;
   border: none;
   border-radius: 4px;
-  background-color: var(--brand-color);
-  color: var(--white-color);
+  background-color: $brand-color;
+  color: $white-color;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
@@ -610,157 +445,13 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  transition: background-color var(--time) var(--cubic);
+  transition: background-color $main-time $cubic;
 }
 .registration__button:hover,
 .registration__button:focus {
   background-color: #188ce8;
 }
 /*Подвал*/
-.basment {
-  background: #2f303a;
-  width: auto;
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-.basment__box {
-  display: flex;
-}
-/* Адресса подвала */
-.basment__addreses {
-  margin-right: 70px;
-}
-/* Манипуляции с ссылками адреса */
-
-/* Контакты подвала */
-
-.address__item {
-  margin-bottom: 9px;
-
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-
-  transition: color var(--time) var(--cubic);
-}
-.address__item:not(:last-child) {
-  margin-bottom: 9px;
-}
-.address__item--color-white {
-  color: var(--white-color);
-}
-.address__item:hover,
-.address__item:focus {
-  color: var(--brand-color);
-}
-
-.basment__logo {
-  margin-bottom: 20px;
-}
-.logo__text--color-white {
-  color: var(--white-color);
-}
-
-.basment-header {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-/* Соц-сети подвала */
-.social-list {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  justify-items: left;
-  margin-top: 20px;
-  margin-right: 92px;
-}
-
-.social-list__link {
-  display: flex;
-  justify-content: center;
-  border: none;
-  border-radius: 50%;
-  margin-right: 10px;
-  width: 44px;
-  height: 44px;
-  fill: var(--white-color);
-  background-color: rgba(255, 255, 255, 0.1);
-
-  transition: background-color var(--time) var(--cubic),
-    fill var(--time) var(--cubic);
-}
-
-.social-list__link:hover,
-.social-list__link:focus {
-  fill: var(--white-color);
-  background-color: var(--brand-color);
-  border-color: var(--brand-color);
-}
-
-.subscribe-form {
-  margin-top: 20px;
-  display: flex;
-}
-.subscribe-form__email {
-  width: 358px;
-  height: 50px;
-  margin-right: 12px;
-  padding-left: 16px;
-  outline: rgba(255, 255, 255, 0.3);
-  background-color: #2f303a;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-}
-.subscribe-form__email::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.subscribe-form__email:focus {
-  color: rgba(255, 255, 255, 0.6);
-  border: 1px solid var(--brand-color);
-}
-.button-box {
-  display: flex;
-}
-
-.button-box__button {
-  display: flex;
-  width: 200px;
-  height: 50px;
-
-  justify-content: center;
-  align-items: center;
-
-  color: var(--white-color);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-
-  background-color: var(--brand-color);
-
-  border-radius: 4px;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
-  transition: background-color var(--time) var(--cubic);
-}
-
-.button-box__button:hover,
-.button-box__button:focus {
-  background-color: #188ce8;
-}
-.button-box__icon {
-  margin-left: 10px;
-  fill: var(--white-color);
-}
 
 /*Портфолио*/
 /* Кнопки портфолио */
@@ -785,17 +476,16 @@
   border: #f5f4fa;
   border-radius: 4px;
 
-  transition: background-color var(--time) var(--cubic),
-    box-shadow var(--time) var(--cubic);
+  transition: background-color $main-time $cubic, box-shadow $main-time $cubic;
 }
 .portfolio-nav__button--blue {
-  background-color: var(--brand-color);
-  color: var(--white-color);
+  background-color: $brand-color;
+  color: $white-color;
 }
 .portfolio-nav__button:hover,
 .portfolio-nav__button:focus {
-  background-color: var(--brand-color);
-  color: var(--white-color);
+  background-color: $brand-color;
+  color: $white-color;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -825,7 +515,7 @@
   height: 100%;
   transform: translateY(100%);
   background-color: rgba(33, 150, 243, 0.9);
-  transition: transform var(--time) var(--cubic);
+  transition: transform $main-time $cubic;
 }
 
 .overlay__info {
@@ -836,7 +526,7 @@
   font-size: 18px;
   line-height: 1.55;
   letter-spacing: 0.03em;
-  color: var(--white-color);
+  color: $white-color;
 }
 
 .project {
@@ -857,14 +547,14 @@
   transform: translateY(0);
 }
 .project__name {
-  color: var(--main-text-color);
+  color: $main-text-color;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
 }
 
 .project__description {
-  color: var(--second-text-color);
+  color: $second-text-color;
   font-size: 16px;
   line-height: 2;
 }
