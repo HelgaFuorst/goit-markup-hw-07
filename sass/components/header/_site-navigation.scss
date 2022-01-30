@@ -1,18 +1,3 @@
-.head {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  border-bottom: 1px solid #ececec;
-}
-.head__row {
-  display: flex;
-  align-items: center;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
 .site-nav {
   display: flex;
   margin-left: 93px;
@@ -72,37 +57,4 @@
     bottom: -30px;
     left: 0;
   }
-}
-
-.site-contacts {
-  display: flex;
-  margin-left: auto;
-}
-
-.site-contacts__item {
-  fill: $second-text-color;
-
-  &:not(:last-child) {
-    margin-right: 50px;
-  }
-}
-.site-contacts__link {
-  display: flex;
-  align-items: center;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color: $second-text-color;
-
-  transition: color $main-time $cubic, fill $main-time $cubic;
-
-  &:hover,
-  &:focus {
-    color: $brand-color;
-    fill: $brand-color;
-  }
-}
-.site-contacts__icon {
-  margin-right: 10px;
 }
